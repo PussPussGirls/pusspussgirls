@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiew</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+<body>
+    <div clas="header">
+        <header>
+            <p class="headerText" onclick="redirecTo('/')">PussPussGirls.club</p>
+        </header>
+        <div id="wrapper">
+            <p id="wrapperP" class="navA" onclick="redirecTo('/join')">Join Club</p>
+            <p id="wrapperP" class="navA" onclick="redirecTo('/login')">Log in</p>
+            <p id="wrapperP" class="navA" onclick="redirecTo('/videos')">Videos</p>
+            <p id="wrapperP" class="navA" onclick="redirecTo('/pictures')">Pictures</p>
+            <p id="wrapperP" class="navA" onclick="redirecTo('/recommended')">Recommended</p>
+            <p id="wrapperP" class="navA" onclick="redirecTo('/categories')">Categories</p>
+        </div>
+    </div>
+
+
+    <div id="wathchDiv" class="center">
+        <img src="" alt="">
+    </div>
+</body>
+</html>
+
+<script>
+    const queryString = window.location.search;
+    console.log(queryString);
+
+    const urlParams = new URLSearchParams(queryString);
+    console.log(urlParams);
+
+    urlParam = urlParams.toString()
+    console.log(urlParams)
+    console.log(urlParam)
+    
+
+    let watchVideo = urlParam.substring(4)
+    let watchImage = urlParam.substring(4)
+    console.log(watchVideo);
+
+
+    let wathchDiv = document.getElementById('wathchDiv')
+
+    if (urlParam.startsWith('key=videos') == true) {
+        video = true
+    } else {
+        video = false
+    }
+
+    if(video == false) {
+        wathchDiv.innerHTML = `<img width="720" height="480" src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchVideo}.png?alt=media&token=6b38d9c2-27ea-49fc-bc48-15b73c8950a6" alt="">`
+    } else {
+        wathchDiv.innerHTML = `<video width="720" height="480" controls><source src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchImage}.png?alt=media&token=c613623f-94df-47f0-b5f7-ffede2a322ce" type="video/mp4"></video>`
+    }
+</script>
