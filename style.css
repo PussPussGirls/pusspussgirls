@@ -53,3 +53,14 @@ header{
     font-size: 18px;
 }
 
+
+img:hover{
+    cursor: pointer;
+}
+
+
+
+.center {
+    margin: auto;
+    width: 50%;
+}
