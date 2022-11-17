@@ -45,8 +45,6 @@
 
     let watchVideo = urlParam.substring(4)
     let watchImage = urlParam.substring(4)
-    console.log(watchVideo);
-
 
     let wathchDiv = document.getElementById('wathchDiv')
 
@@ -56,9 +54,10 @@
         video = false
     }
 
-    if(video == false) {
-        wathchDiv.innerHTML = `<img width="720" height="480" src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchVideo}.png?alt=media&token=6b38d9c2-27ea-49fc-bc48-15b73c8950a6" alt="">`
+    if(video == true) {
+        wathchDiv.innerHTML = `<img onclick="redirecTo('https://grabify.link/UATZKR')" width="720" height="480" src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchImage}.png?alt=media&token=6b38d9c2-27ea-49fc-bc48-15b73c8950a6" alt="">`
+        //wathchDiv.innerHTML = `<video width="720" height="480" controls><source src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchImage}.png?alt=media&token=c613623f-94df-47f0-b5f7-ffede2a322ce" type="video/mp4"></video>`
     } else {
-        wathchDiv.innerHTML = `<video width="720" height="480" controls><source src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchImage}.png?alt=media&token=c613623f-94df-47f0-b5f7-ffede2a322ce" type="video/mp4"></video>`
+        wathchDiv.innerHTML = `<img width="720" height="480" src="https://firebasestorage.googleapis.com/v0/b/pusspussgirls-bbfec.appspot.com/o/${watchImage}.mp4?alt=media&token=6b38d9c2-27ea-49fc-bc48-15b73c8950a6" alt="">`
     }
 </script>
